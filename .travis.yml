@@ -8,21 +8,17 @@ cache:
   - "$HOME/.m2"
 
 jobs:
-  include:
-  # 1.1 Semver check
   - stage: Build
     jdk: openjdk8
     script: ./travis-integration/mvnw verify -Pcheck-semantic-version -DskipTests=true
     env: CHECK_SEMANTIC_VERSION=true
 
-  # 1.2 Check JDK 8,10,ea
   - stage: Test
     jdk: openjdk8
     script: ./travis-integration/mvnw clean verify
     after_success:
       - ./travis-integration/mvnw clean jacoco:prepare-agent test jacoco:report coveralls:report
 
-  # 2. Deploy
   - stage: Deploy
     jdk: openjdk8
     script:
@@ -31,15 +27,6 @@ jobs:
 branches:
   only:
   - travis-integration
-
-jobs:
-  include:
-    - stage: Build
-      script: 
-    - stage: Test
-      script: ./test 2
-    - stage: Deploy
-      script: ./deploy
 
 notifications:
   email:
