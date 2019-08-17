@@ -1,0 +1,9 @@
+language: java
+java:
+- '8'
+
+notifications:
+  email:
+  - info@techprimers.com
+
+
