@@ -10,16 +10,13 @@ cache:
   - "$HOME/.m2"
 
 jobs:
-  - stage: Build
-    jdk: openjdk8
-    script: ./mvnw verify -Pcheck-semantic-version -DskipTests=true
-    env: CHECK_SEMANTIC_VERSION=true
-
   - stage: Test
     jdk: openjdk8
     script: ./mvnw clean verify
-    after_success:
-      - ./mvnw clean jacoco:prepare-agent test jacoco:report coveralls:report
+
+  - stage: Coverage
+    jdk: openjdk8
+    script: ./mvnw clean jacoco:prepare-agent test jacoco:report coveralls:report
 
   - stage: Deploy
     jdk: openjdk8
