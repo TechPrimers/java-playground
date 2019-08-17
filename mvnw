@@ -199,7 +199,6 @@ BASE_DIR=`find_maven_basedir "$(pwd)"`
 if [ -z "$BASE_DIR" ]; then
   exit 1;
 fi
-BASE_DIR=$BASE_DIR/travis-integration
 
 ##########################################################################################
 # Extension to allow automatically downloading the maven-wrapper.jar from Maven-central
