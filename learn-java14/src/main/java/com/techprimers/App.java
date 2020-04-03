@@ -18,5 +18,6 @@ public class App {
 
         //IntellIJ 1019 doesnt work well with preview features of Java14.
         // Upgrading to Release Candidate 2020.1
+        //Configured --enable-preview as vmargs and compiler args, however IDE fails to identify record
     }
 }
