@@ -14,9 +14,14 @@ public class App {
 
         User user = new User(30, "Ajay");
 
-        System.out.println("User age: " + user.getAge());
+        System.out.println("User age: " + user.age());
 
         //IntellIJ 1019 doesnt work well with preview features of Java14.
         // Upgrading to Release Candidate 2020.1
+        //Configured --enable-preview as vmargs and compiler args, however IDE fails to identify record
+
+        //Update: Using 2020.1 RC worked.
+        System.out.println("User name: " + user.name());
+
     }
 }
