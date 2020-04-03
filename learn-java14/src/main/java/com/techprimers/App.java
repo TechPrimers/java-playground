@@ -16,6 +16,7 @@ public class App {
 
         System.out.println("User age: " + user.getAge());
 
-        //IntellIJ 1019 doesnt work well with preview features of Java14. Upgrding to Release Candidate 2020.1
+        //IntellIJ 1019 doesnt work well with preview features of Java14.
+        // Upgrading to Release Candidate 2020.1
     }
 }
