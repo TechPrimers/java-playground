@@ -1,3 +1,8 @@
+# Playground repo for Java projects
+This repo has multiple branches and each branch represent different projects/proof of concepts for playing with Java technologies/frameworks.
+
+P.S. Once tested, master will be moved to the corresponding branch.
+
 # Java 14
 Java 14 got GA few days ago... Here we go..!
 This branch contains some of the Java 14 which I have played with!
